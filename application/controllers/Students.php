@@ -58,9 +58,9 @@ class Students extends CI_Controller{
     {
         $this->form_validation->set_rules('first_name','<strong><em>First Name</em></strong>','trim|required');
         $this->form_validation->set_rules('last_name','<strong><em>Last Name</em></strong>','trim|required');
-        $this->form_validation->set_rules('email','<strong><em>Email</em></strong>','trim|required');
-        $this->form_validation->set_rules('password','<strong><em>Password</em></strong>','trim|required');
-        $this->form_validation->set_rules('c_password','<strong><em>Confirm Password</em></strong>','trim|required|differs');
+        $this->form_validation->set_rules('email','<strong><em>Email</em></strong>','trim|required|is_unique[users.email]|valid_email');
+        $this->form_validation->set_rules('password','<strong><em>Password</em></strong>','trim|required|min_length[8]');
+        $this->form_validation->set_rules('c_password','<strong><em>Confirm Password</em></strong>','trim|required|differs[password]');
         if($this->form_validation->run()===FALSE)
         {
             // $data['errors'] = error_array();
