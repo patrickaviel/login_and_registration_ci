@@ -16,16 +16,35 @@ p{
 }
 h1{
     margin-bottom: 20px;
+    display: inline-block;
 }
 .info{
     font-size: 20px;
     line-height: 30px;
     padding: 20px;
-    border: 1px dotted gray;
+    height: 350px;
+    
+}
+section{
     width: 100%;
+    border: 1px dotted gray;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 20px;
     height: 350px;
     background-image: url('/assets/images/undraw_professor_8lrt.png');
     background-size: 300px;
     background-repeat: no-repeat;
     background-position: bottom right;
+}
+a{
+    float: right;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.info, .values{
+    display: inline-block;
 }

@@ -84,4 +84,9 @@ class Students extends CI_Controller{
             redirect("/students/index");
         }
     }
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect("/students/index");   
+    }
 }
